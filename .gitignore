@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+*.pyc
+
+# Generated site output (rebuild with scripts/build.py)
+site/
+
+# OS cruft
+.DS_Store
+Thumbs.db

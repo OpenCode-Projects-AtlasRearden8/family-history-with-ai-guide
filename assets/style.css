@@ -1,0 +1,142 @@
+/* The Family History with AI Guide — warm, readable, print-friendly.
+   Copyright (c) 2026 Asdale Dynamics, LLC */
+
+:root {
+  --ink: #2b2b26;
+  --paper: #faf7f2;
+  --card: #ffffff;
+  --accent: #7c4a2d;
+  --accent-soft: #e9ded2;
+  --link: #20536b;
+  --rule: #e3dacd;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.06rem;
+  line-height: 1.65;
+}
+
+header.masthead {
+  background: var(--card);
+  border-bottom: 4px double var(--accent);
+  text-align: center;
+  padding: 2.2rem 1rem 1.4rem;
+}
+.masthead-title a {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+.masthead-sub {
+  margin: 0.2rem 0 0;
+  font-style: italic;
+  color: #6d675e;
+  font-size: 0.98rem;
+}
+
+nav.site-nav {
+  background: var(--accent-soft);
+  border-bottom: 1px solid var(--rule);
+  padding: 0.45rem 0.8rem;
+  text-align: center;
+}
+nav.site-nav ul {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav.site-nav li { display: inline-block; }
+nav.site-nav a {
+  display: inline-block;
+  color: var(--ink);
+  text-decoration: none;
+  font-family: "Gill Sans", "Trebuchet MS", Verdana, sans-serif;
+  font-size: 0.92rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 14px;
+}
+nav.site-nav a:hover, nav.site-nav a.active { background: var(--card); color: var(--accent); }
+nav.site-nav .nav-ref { margin-left: 1.2rem; }
+
+main#content { max-width: 46rem; margin: 0 auto; padding: 1.6rem 1.1rem 3rem; }
+
+article h1 {
+  font-size: 1.95rem;
+  line-height: 1.25;
+  color: var(--accent);
+  margin: 0.6rem 0 0.4rem;
+}
+article h2 {
+  font-size: 1.3rem;
+  color: var(--ink);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.25rem;
+  margin-top: 2.1rem;
+}
+article h3 { font-size: 1.08rem; }
+article p { margin: 0.85rem 0; }
+article a { color: var(--link); }
+article blockquote {
+  margin: 1.2rem 0.2rem;
+  padding: 0.6rem 1rem;
+  background: var(--card);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+}
+article blockquote p { margin: 0.2rem 0; }
+article code, pre {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.86em;
+  background: #f4efe6;
+  border-radius: 4px;
+}
+article code { padding: 0.08em 0.35em; }
+article pre { padding: 0.8rem 1rem; overflow-x: auto; line-height: 1.45; }
+article hr { border: 0; border-top: 2px solid var(--rule); margin: 2rem auto; width: 60%; }
+article ul, article ol { padding-left: 1.5rem; }
+article li { margin: 0.3rem 0; }
+
+article table {
+  border-collapse: collapse;
+  margin: 1.2rem 0;
+  font-size: 0.95rem;
+  background: var(--card);
+  width: 100%;
+}
+article th, article td {
+  border: 1px solid var(--rule);
+  padding: 0.45rem 0.6rem;
+  text-align: left;
+  vertical-align: top;
+}
+article th { background: var(--accent-soft); font-family: "Trebuchet MS", Verdana, sans-serif; font-size: 0.85rem; }
+
+article ul.checklist { list-style: none; padding-left: 0.3rem; }
+article li.task { display: flex; align-items: flex-start; gap: 0.5rem; }
+article li.task input { margin-top: 0.45rem; }
+
+footer.site-footer {
+  border-top: 1px solid var(--rule);
+  background: var(--card);
+  text-align: center;
+  color: #6d675e;
+  font-size: 0.85rem;
+  padding: 1.2rem 1rem 2rem;
+}
+footer.site-footer p { margin: 0.25rem 0; }
+footer.site-footer a { color: var(--link); }
+
+@media print {
+  nav.site-nav, footer.site-footer { display: none; }
+  body { background: #fff; font-size: 11pt; }
+  main#content { max-width: none; }
+}
